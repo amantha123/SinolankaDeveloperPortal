@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite">
+
+    <listeners>
+        <listener class-name="com.pack.ExtentReportListener.ExtentReporterNG" />
+    </listeners>
+
+
+    <test name="Test Cases">
+        <classes>
+            <class name="com.pack.testcases.LoginPageTest"></class>
+            <class name="com.pack.testcases.DashboardPageTest"></class>
+
+        </classes>
+    </test>
+</suite>
