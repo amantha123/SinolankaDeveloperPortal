@@ -76,6 +76,12 @@ public class UserRolesPageTest extends TestBase {
         userRolesPage.verifyAddUserRolesBtn();
     }
 
+    @Test(priority = 6)
+    public void verifyMandatoryFieldsTest(){
+        userRolesPage.clickOnUserRolesPageLink();
+        userRolesPage.verifyMandatoryFields();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
