@@ -5,7 +5,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
 
 public class UserRolesPage extends TestBase {
 
@@ -32,6 +31,12 @@ public class UserRolesPage extends TestBase {
 
     @FindBy(xpath = "//div[contains(@role,'combobox')]")
     WebElement Permissions;
+
+    @FindBy(xpath = "//button[@type='submit'][contains(.,'Save')]")
+    WebElement SaveBtn;
+
+    @FindBy(xpath = "//span[@class='ng-option-label'][contains(.,'admin.permission.list')]")
+    WebElement PermissionsOption;
 
     @FindBy(xpath = "//p[@class='text-danger'][contains(.,'Name is required.')]")
     WebElement Validation;
@@ -88,5 +93,10 @@ public class UserRolesPage extends TestBase {
         AddUserRoles.click();
         RoleName.click();
         RoleName.sendKeys(rolename);
+        Description.click();
+        Description.sendKeys(description);
+        Permissions.click();
+        PermissionsOption.click();
+        SaveBtn.click();
     }
 }

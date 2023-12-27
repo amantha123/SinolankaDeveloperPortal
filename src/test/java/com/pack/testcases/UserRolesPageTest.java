@@ -86,6 +86,14 @@ public class UserRolesPageTest extends TestBase {
     public void verifyAddingUserRolesTest(String name, String description){
         userRolesPage.clickOnUserRolesPageLink();
         userRolesPage.verifyAddingUserRoles(name,description);
+        synchronized (this){
+            try{
+                this.wait(100);
+                System.out.println("Thread in runnable state");
+            }catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @AfterMethod
