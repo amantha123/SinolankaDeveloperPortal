@@ -82,7 +82,16 @@ public class UserRolesPageTest extends TestBase {
         userRolesPage.verifyMandatoryFields();
     }
 
-    @Test(priority = 7)
+    @DataProvider
+    public Object[][] getTestData1(){
+        Object data[][] = TestUtil.getTestData(sheetName);
+        return new Object[][] {
+                {"Testing Role"},
+                {"Testing Role"},
+        };
+    }
+
+    @Test(priority = 7, dataProvider = "getTestData1")
     public void verifyAddingUserRolesTest(String name, String description){
         userRolesPage.clickOnUserRolesPageLink();
         userRolesPage.verifyAddingUserRoles(name,description);
