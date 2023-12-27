@@ -64,7 +64,7 @@ public class UserRolesPage extends TestBase {
         return Name.isDisplayed();
     }
 
-    public void filterUserRolesPage(String name){
+    public void filterUserRolesPageByName(String name){
         UserRoles.click();
         Name.click();
         Name.sendKeys(name);
@@ -85,7 +85,7 @@ public class UserRolesPage extends TestBase {
         Description.sendKeys(Keys.TAB);
         Validation1.isDisplayed();
         Permissions.click();
-        Permissions.sendKeys(Keys.TAB);
+        Permissions.click();
         Validation2.isDisplayed();
     }
 

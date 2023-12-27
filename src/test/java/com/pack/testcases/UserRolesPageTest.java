@@ -59,7 +59,7 @@ public class UserRolesPageTest extends TestBase {
     @Test(priority = 4, dataProvider = "getTestData")
     public void filterUserRolesPageTest(String name){
         userRolesPage.clickOnUserRolesPageLink();
-        userRolesPage.filterUserRolesPage(name);
+        userRolesPage.filterUserRolesPageByName(name);
         synchronized (this){
             try{
                 this.wait(100);
@@ -74,6 +74,14 @@ public class UserRolesPageTest extends TestBase {
     public void verifyAddUserRolesBtnTest(){
         userRolesPage.clickOnUserRolesPageLink();
         userRolesPage.verifyAddUserRolesBtn();
+        synchronized (this){
+            try{
+                this.wait(100);
+                System.out.println("Thread in runnable state");
+            }catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Test(priority = 6)
