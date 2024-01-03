@@ -101,23 +101,23 @@ public class UserManagementPage extends TestBase {
         return SearchBtn.isDisplayed();
     }
 
-    public void verifyFilteringUserListByName(String name){
+    public void verifyFilteringUserListByName(){
         Name.click();
-        Name.sendKeys(name);
+        Name.sendKeys("Amantha Gunawardena");
         SearchBtn.click();
         SearchResult.isDisplayed();
     }
 
-    public void verifyFilteringUserListByContactNo(String contactno){
+    public void verifyFilteringUserListByContactNo(){
         ContactNo.click();
-        ContactNo.sendKeys(contactno);
+        ContactNo.sendKeys("774848813");
         SearchBtn.click();
         SearchResult1.isDisplayed();
     }
 
-    public void verifyFilteringUserListByEmail(String email){
+    public void verifyFilteringUserListByEmail(){
         Email.click();
-        Email.sendKeys(email);
+        Email.sendKeys("amantha.gunawardena@veracitygp.com");
         SearchBtn.click();
         SearchResult2.isDisplayed();
     }

@@ -53,47 +53,25 @@ public class UserManagementPageTest extends TestBase {
         userManagementPage.verifySearchBtn();
     }
 
-    @DataProvider
-    public Object[][] getTestData(){
-        Object data[][] = TestUtil.getTestData(sheetName);
-        return new Object[][] {
-                {"Amantha Gunawardena"},
-        };
-    }
 
-    @Test(priority = 4, dataProvider = "getTestData")
-    public void verifyFilteringUserListByNameTest(String name){
+    @Test(priority = 4)
+    public void verifyFilteringUserListByNameTest(){
         userManagementPage.clickOnUserManagementPageLink();
-        userManagementPage.verifyFilteringUserListByName(name);
+        userManagementPage.verifyFilteringUserListByName();
     }
 
-    @DataProvider
-    public Object[][] getTestData1(){
-        Object data[][] = TestUtil.getTestData(sheetName);
-        return new Object[][] {
-                {"774848813"},
-        };
-    }
 
-    @Test(priority = 5, dataProvider = "getTestData1")
-    public void verifyFilteringUserListByContactNoTest(String contactno){
+    @Test(priority = 5)
+    public void verifyFilteringUserListByContactNoTest(){
         userManagementPage.clickOnUserManagementPageLink();
-        userManagementPage.verifyFilteringUserListByContactNo(contactno);
+        userManagementPage.verifyFilteringUserListByContactNo();
 
     }
 
-    @DataProvider
-    public Object[][] getTestData2(){
-        Object data[][] = TestUtil.getTestData(sheetName);
-        return new Object[][] {
-                {"amantha.gunawardena@veracitygp.com"},
-        };
-    }
-
-    @Test(priority = 6, dataProvider = "getTestData2")
-    public void verifyFilteringUserListByEmailTest(String email){
+    @Test(priority = 6)
+    public void verifyFilteringUserListByEmailTest(){
         userManagementPage.clickOnUserManagementPageLink();
-        userManagementPage.verifyFilteringUserListByEmail(email);
+        userManagementPage.verifyFilteringUserListByEmail();
     }
 
     @Test(priority = 7)
