@@ -21,6 +21,7 @@ public class DashboardPageTest extends TestBase {
     public void setUp(){
         initialization();
         loginPage = new LoginPage();
+        dashboardPage = new DashboardPage();
     }
 
     @Test(priority=1)
