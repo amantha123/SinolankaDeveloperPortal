@@ -21,7 +21,7 @@ public class DashboardPageTest extends TestBase {
     public void setUp(){
         initialization();
         loginPage = new LoginPage();
-        dashboardPage = new DashboardPage();
+        dashboardPage = loginPage.login(prop.getProperty("email"), prop.getProperty("password"));
     }
 
     @Test(priority=1)
