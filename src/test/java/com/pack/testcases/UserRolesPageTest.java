@@ -47,15 +47,33 @@ public class UserRolesPageTest extends TestBase {
     }
 
     @Test(priority = 4)
+    public void verifyMandatoryFieldsAddPermissionRolesTest(){
+        userRolesPage.clickOnUserRolesPageLink();
+        userRolesPage.verifyMandatoryFieldsAddPermissionRoles();
+    }
+
+    @Test(priority = 5)
+    public void verifyAddingUserRoleTest(){
+        userRolesPage.clickOnUserRolesPageLink();
+        userRolesPage.verifyAddingPermissionRoles();
+    }
+
+    @Test(priority = 6)
     public void verifyFilteringUserRolesPageByNameTest(){
         userRolesPage.clickOnUserRolesPageLink();
         userRolesPage.verifyFilteringUserRolesPageByName();
     }
 
-    @Test(priority = 5)
-    public void verifyMandatoryFieldsAddPermissionRolesTest(){
+    @Test(priority = 7)
+    public void verifyEditingUserRolesTest(){
         userRolesPage.clickOnUserRolesPageLink();
-        userRolesPage.verifyMandatoryFieldsAddPermissionRoles();
+        userRolesPage.verifyEditingUserRoles();
+    }
+
+    @Test(priority = 8)
+    public void verifyViewingUserRolesDetailsTest(){
+        userRolesPage.clickOnUserRolesPageLink();
+        userRolesPage.verifyViewingUserRolesDetails();
     }
 
     @AfterMethod

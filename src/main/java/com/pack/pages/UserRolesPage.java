@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class UserRolesPage extends TestBase {
 
     @FindBy(xpath = "//span[@class='link-title'][contains(.,'User Roles')]")
@@ -31,6 +32,21 @@ public class UserRolesPage extends TestBase {
 
     @FindBy(xpath = "//div[contains(@role,'combobox')]")
     WebElement Permissions;
+
+    @FindBy(xpath = "//span[@class='ng-option-label'][contains(.,'developer.permission.list')]")
+    WebElement PermissionOption;
+
+    @FindBy(xpath = "//button[@type='submit'][contains(.,'Save')]")
+    WebElement SaveBtn;
+
+    @FindBy(xpath = "//svg[@class='feather feather-edit']")
+    WebElement EditIcon;
+
+    @FindBy(xpath = "//svg[@class='feather feather-eye']")
+    WebElement ViewIcon;
+
+    @FindBy(xpath = "//a[@routerlink='/authorization/roles/list'][contains(.,'Cancel')]")
+    WebElement CancelBtn;
 
     @FindBy(xpath = "//p[@class='text-danger'][contains(.,'Name is required.')]")
     WebElement Validation1;
@@ -83,5 +99,27 @@ public class UserRolesPage extends TestBase {
         Permissions.click();
         Permissions.click();
         Validation3.isDisplayed();
+    }
+
+    public void verifyAddingPermissionRoles(){
+        AddPermissionRolesBtn.click();
+        RoleName.click();
+        RoleName.sendKeys("Testing Role");
+        Description.click();
+        Description.sendKeys("Testing Role");
+        Permissions.click();
+        PermissionOption.click();
+        Permissions.click();
+        SaveBtn.click();
+    }
+
+    public void verifyEditingUserRoles(){
+        EditIcon.click();
+        SaveBtn.click();
+    }
+
+    public void verifyViewingUserRolesDetails(){
+        ViewIcon.click();
+        CancelBtn.click();
     }
 }
