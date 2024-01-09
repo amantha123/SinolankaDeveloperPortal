@@ -39,10 +39,10 @@ public class UserRolesPage extends TestBase {
     @FindBy(xpath = "//button[@type='submit'][contains(.,'Save')]")
     WebElement SaveBtn;
 
-    @FindBy(xpath = "//svg[@class='feather feather-edit']")
+    @FindBy(xpath = "/html/body/app-root/app-base/div/div[2]/div/div/app-authorization/app-crop/app-crop-list/div[3]/div/div/div/div[2]/div[1]/div/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/datatable-row-wrapper/datatable-body-row/div[2]/datatable-body-cell[3]/div/div/a[1]/svg/path[1]")
     WebElement EditIcon;
 
-    @FindBy(xpath = "//svg[@class='feather feather-eye']")
+    @FindBy(xpath = "/html/body/app-root/app-base/div/div[2]/div/div/app-authorization/app-crop/app-crop-list/div[3]/div/div/div/div[2]/div[1]/div/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/datatable-row-wrapper/datatable-body-row/div[2]/datatable-body-cell[3]/div/div/a[2]")
     WebElement ViewIcon;
 
     @FindBy(xpath = "//a[@routerlink='/authorization/roles/list'][contains(.,'Cancel')]")

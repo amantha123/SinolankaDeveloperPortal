@@ -53,15 +53,17 @@ public class UserRolesPageTest extends TestBase {
     }
 
     @Test(priority = 5)
-    public void verifyAddingUserRoleTest(){
+    public void verifyAddingUserRoleTest() throws InterruptedException{
         userRolesPage.clickOnUserRolesPageLink();
         userRolesPage.verifyAddingPermissionRoles();
+        Thread.sleep(2000);
     }
 
     @Test(priority = 6)
-    public void verifyFilteringUserRolesPageByNameTest(){
+    public void verifyFilteringUserRolesPageByNameTest() throws InterruptedException{
         userRolesPage.clickOnUserRolesPageLink();
         userRolesPage.verifyFilteringUserRolesPageByName();
+        Thread.sleep(2000);
     }
 
     @Test(priority = 7)
