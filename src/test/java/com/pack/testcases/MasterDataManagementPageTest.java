@@ -4,7 +4,6 @@ import com.pack.base.TestBase;
 import com.pack.pages.DashboardPage;
 import com.pack.pages.LoginPage;
 import com.pack.pages.MasterDataManagementPage;
-import com.pack.pages.UserManagementPage;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
