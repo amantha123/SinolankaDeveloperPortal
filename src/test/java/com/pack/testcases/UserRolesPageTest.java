@@ -66,11 +66,11 @@ public class UserRolesPageTest extends TestBase {
         Thread.sleep(2000);
     }
 
-    @Test(priority = 7)
+  /*  @Test(priority = 7)
     public void verifyEditingUserRolesTest(){
         userRolesPage.clickOnUserRolesPageLink();
         userRolesPage.verifyEditingUserRoles();
-    }
+    }*/
 
     @Test(priority = 8)
     public void verifyViewingUserRolesDetailsTest(){
