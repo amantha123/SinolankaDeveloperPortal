@@ -19,10 +19,10 @@ public class ProjectManagementPage extends TestBase {
     @FindBy(xpath = "//input[contains(@formcontrolname,'name')]")
     WebElement ProjectName;
 
-    @FindBy(xpath = "//input[contains(@autocomplete,'acbf7ae03725')]")
+    @FindBy(xpath = "/html/body/app-root/app-base/div/div[2]/div/div/app-project/app-project-list-view/div[2]/div/div/div/div/form/div[1]/div[2]/div/ng-select/div")
     WebElement Type;
 
-    @FindBy(xpath = "//input[contains(@autocomplete,'ac5bf6141529')]")
+    @FindBy(xpath = "/html/body/app-root/app-base/div/div[2]/div/div/app-project/app-project-list-view/div[2]/div/div/div/div/form/div[1]/div[3]/div/ng-select/div")
     WebElement Customer;
 
     @FindBy(xpath = "//input[contains(@formcontrolname,'from_date')]")
