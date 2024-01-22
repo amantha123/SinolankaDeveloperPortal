@@ -42,6 +42,41 @@ public class EngineerManagementPageTest extends TestBase {
     public void verifyEngineerManagementPageTest(){
         engineerManagementPage.clickOnEngineerManagementPageLink();
         engineerManagementPage.verifyEngineerListLabel();
+        engineerManagementPage.verifyAddEngineerBtn();
+        engineerManagementPage.verifyName();
+        engineerManagementPage.verifyContactNo();
+        engineerManagementPage.verifyEmail();
+    }
+
+    @Test(priority = 4)
+    public void verifyMandatoryFieldsTest(){
+        engineerManagementPage.clickOnEngineerManagementPageLink();
+        engineerManagementPage.verifyMandatoryFields();
+    }
+
+    @Test(priority = 5)
+    public void verifyAddingEngineerTest() throws InterruptedException{
+        engineerManagementPage.clickOnEngineerManagementPageLink();
+        engineerManagementPage.verifyAddingEngineer();
+        Thread.sleep(2000);
+    }
+
+    @Test(priority = 6)
+    public void verifyFilteringEngineersByNameTest(){
+        engineerManagementPage.clickOnEngineerManagementPageLink();
+        engineerManagementPage.verifyFilteringEngineersByName();
+    }
+
+    @Test(priority = 7)
+    public void verifyFilteringEngineersByContactNoTest(){
+        engineerManagementPage.clickOnEngineerManagementPageLink();
+        engineerManagementPage.verifyFilteringEngineersByContactNo();
+    }
+
+    @Test(priority = 8)
+    public void verifyFilteringEngineersByEmailTest(){
+        engineerManagementPage.clickOnEngineerManagementPageLink();
+        engineerManagementPage.verifyFilteringEngineersByEmail();
     }
 
     @AfterMethod
