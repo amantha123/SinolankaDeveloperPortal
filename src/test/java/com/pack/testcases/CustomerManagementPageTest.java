@@ -42,6 +42,10 @@ public class CustomerManagementPageTest extends TestBase {
     public void verifyCustomerManagementPageTest(){
         customerManagementPage.clickOnCustomerManagementPageLink();
         customerManagementPage.verifyCustomerListLabel();
+        customerManagementPage.verifyAddCustomerBtn();
+        customerManagementPage.verifyName();
+        customerManagementPage.verifyContactNo();
+        customerManagementPage.verifyEmail();
     }
 
     @AfterMethod

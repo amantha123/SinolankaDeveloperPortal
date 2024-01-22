@@ -42,6 +42,13 @@ public class ProjectManagementPageTest extends TestBase {
     public void verifyProjectManagementPageTest(){
         projectManagementPage.clickOnProjectManagementPageLink();
         projectManagementPage.verifyProjectListLabel();
+        projectManagementPage.verifyAddProjectBtn();
+        projectManagementPage.verifyProjectName();
+        projectManagementPage.verifyTypes();
+        projectManagementPage.verifyCustomer();
+        projectManagementPage.verifyFromDate();
+        projectManagementPage.verifyToDate();
+        projectManagementPage.verifyReference();
     }
 
     @AfterMethod
