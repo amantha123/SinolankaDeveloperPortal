@@ -79,6 +79,24 @@ public class EngineerManagementPageTest extends TestBase {
         engineerManagementPage.verifyFilteringEngineersByEmail();
     }
 
+    @Test(priority = 9)
+    public void verifyEditingEngineerDetailsTest(){
+        engineerManagementPage.clickOnEngineerManagementPageLink();
+        engineerManagementPage.verifyEditingEngineerDetails();
+    }
+
+    @Test(priority = 10)
+    public void verifyViewingEngineerDetailsTest(){
+        engineerManagementPage.clickOnEngineerManagementPageLink();
+        engineerManagementPage.verifyViewingEngineerDetails();
+    }
+
+    @Test(priority = 11)
+    public void verifyDeletingEngineersTest(){
+        engineerManagementPage.clickOnEngineerManagementPageLink();
+        engineerManagementPage.verifyDeletingEngineers();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();

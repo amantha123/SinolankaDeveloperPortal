@@ -46,8 +46,20 @@ public class EngineerManagementPage extends TestBase {
     @FindBy(xpath = "//button[@type='submit'][contains(.,'Search')]")
     WebElement Search;
 
-    @FindBy(xpath = "/html/body/app-root/app-base/div/div[2]/div/div/app-engineer/app-engineer-list-view/div[3]/div/div/div/div[2]/div/div[1]/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/datatable-row-wrapper[1]/datatable-body-row/div[2]/datatable-body-cell[4]/div/div/button[1]/svg")
+    @FindBy(xpath = "/html/body/app-root/app-base/div/div[2]/div/div/app-engineer/app-engineer-list-view/div[3]/div/div/div/div[2]/div/div[1]/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/datatable-row-wrapper[1]/datatable-body-row/div[2]/datatable-body-cell[4]/div/div/button[1]")
     WebElement EditIcon;
+
+    @FindBy(xpath = "/html/body/app-root/app-base/div/div[2]/div/div/app-engineer/app-engineer-list-view/div[3]/div/div/div/div[2]/div/div[1]/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/datatable-row-wrapper[1]/datatable-body-row/div[2]/datatable-body-cell[4]/div/div/button[2]")
+    WebElement ViewIcon;
+
+    @FindBy(xpath = "//button[@type='button'][contains(.,'Cancel')]")
+    WebElement CancelBtn;
+
+    @FindBy(xpath = "/html/body/app-root/app-base/div/div[2]/div/div/app-engineer/app-engineer-list-view/div[3]/div/div/div/div[2]/div/div[1]/ngx-datatable/div/datatable-body/datatable-selection/datatable-scroller/datatable-row-wrapper[1]/datatable-body-row/div[2]/datatable-body-cell[4]/div/div/a")
+    WebElement DeleteIcon;
+
+    @FindBy(xpath = "//button[@type='button'][contains(.,'Yes')]")
+    WebElement YesBtn;
 
     @FindBy(xpath = "//p[@class='text-danger'][contains(.,'First Name is required.')]")
     WebElement Validation;
@@ -146,5 +158,20 @@ public class EngineerManagementPage extends TestBase {
         Email.click();
         Email.sendKeys("amantha.gunawardena@veracitygp.com");
         Search.click();
+    }
+
+    public void verifyEditingEngineerDetails(){
+        EditIcon.click();
+        SaveBtn.click();
+    }
+
+    public void verifyViewingEngineerDetails(){
+        ViewIcon.click();
+        CancelBtn.click();
+    }
+
+    public void verifyDeletingEngineers(){
+        DeleteIcon.click();
+        YesBtn.click();
     }
 }
