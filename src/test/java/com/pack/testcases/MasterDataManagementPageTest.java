@@ -45,6 +45,12 @@ public class MasterDataManagementPageTest extends TestBase {
        masterDataManagementPage.verifyAddDeviceBtn();
     }
 
+    @Test(priority = 4)
+    public void verifyMandatoryFields(){
+        masterDataManagementPage.clickOnMasterDataManagementPageLink();
+        masterDataManagementPage.verifyMandatoryFields();
+    }
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
